@@ -26,6 +26,26 @@ class PostsController < ApplicationController
     	end
     end
 
+    def edit
+    	@post = Post.find(params[:id])
+    	redirect_to posts_path unless @post.user == current_user
+    end
+
+    def update
+        @post = Post.find(params[:id])
+        if @post.user == current_user
+            if @post.update_attributes(allowed_params)
+                flash[:success] = "Updated post"
+                redirect_to @post
+            else
+                render 'edit'
+            end
+        else
+            redirect_to posts_path
+            flash[:notice] = "You can't to this"
+        end
+	end
+
     private
         def allowed_params
             params.require(:post).permit(:title, :body)
