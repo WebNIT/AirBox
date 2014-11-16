@@ -7,6 +7,9 @@ gem 'rails', '4.1.5'
 # Library for Authentication
 gem 'devise'
 
+# Upload library
+gem 'paperclip', '~> 4.1'
+
 # Database for development(localhost)
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
