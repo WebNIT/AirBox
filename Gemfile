@@ -16,6 +16,10 @@ source 'https://rubygems.org'
 # Upload library
   gem 'paperclip', '~> 4.1'
 
+  gem 'kaminari'
+  gem 'kaminari-bootstrap'
+
+
 # Database for development(localhost)
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
