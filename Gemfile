@@ -7,7 +7,9 @@ source 'https://rubygems.org'
 # Cloud related component
   gem 'aws-sdk', '~> 1.36.1'
   gem 'fog'
-  
+
+# App server
+  gem 'unicorn'  
 
 # Library for Authentication
   gem 'devise'
