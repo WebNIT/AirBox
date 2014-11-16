@@ -2,13 +2,19 @@ source 'https://rubygems.org'
 
 
 # Rails Version
-gem 'rails', '4.1.5'
+  gem 'rails', '4.1.5'
+
+# Cloud related component
+  gem 'aws-sdk', '~> 1.36.1'
+  gem 'fog'
+  
 
 # Library for Authentication
-gem 'devise'
+  gem 'devise'
+  gem "figaro"
 
 # Upload library
-gem 'paperclip', '~> 4.1'
+  gem 'paperclip', '~> 4.1'
 
 # Database for development(localhost)
 group :development, :test do
@@ -35,9 +41,9 @@ end
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+  gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0'
+  gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
+  gem 'sdoc', '~> 0.4.0',          group: :doc
 
