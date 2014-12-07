@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
     :storage => :fog,
     :fog_credentials => {
         provider: 'AWS',
-        aws_access_key_id: "AKIAICP3USVGHEURZY6Q",
-        aws_secret_access_key: "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"
+        aws_access_key_id: "",
+        aws_secret_access_key: ""
     },
     fog_directory: "rails-demo-env"
 	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
